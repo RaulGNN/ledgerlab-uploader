@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Connecting… · Ledger Lab Uploader</title>
+<link rel="stylesheet" href="style.css">
+<script>
+  // Instagram and TikTok only redirect to https pages. This page hands the sign-in code to the
+  // studio running on the owner's own computer; nothing is stored here.
+  var target = "http://localhost:8765/oauth/callback" + window.location.search;
+  window.location.replace(target);
+</script>
+</head>
+<body>
+<main>
+<h1>Connecting your account…</h1>
+<p class="muted">If nothing happens, make sure Channel Studio is running on this computer and
+<a id="go" href="#">continue here</a>.</p>
+<script>document.getElementById("go").href = target;</script>
+</main>
+</body>
+</html>
